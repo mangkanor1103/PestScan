@@ -9,24 +9,27 @@ import { IconSymbol } from '@/components/ui/IconSymbol';
 
 export default function TabTwoScreen() {
   return (
-
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Pest Detection</ThemedText>
-      </ThemedView>
-
-   
+    <ThemedView style={styles.titleContainer}>
+      <ThemedText type="title" style={styles.titleText}>
+        Pest Detection
+      </ThemedText>
+    </ThemedView>
   );
 }
 
 const styles = StyleSheet.create({
-  headerImage: {
-    color: '#808080',
-    bottom: -90,
-    left: -35,
-    position: 'absolute',
-  },
   titleContainer: {
     flexDirection: 'row',
-    gap: 8,
+    alignItems: 'center', // Align items vertically
+    justifyContent: 'center', // Center items horizontally
+    gap: 10,
+    padding: 16,
+    marginTop: 15,
+    backgroundColor: 'transparent',
+  },
+  titleText: {
+    fontSize: 23,
+    fontWeight: 'bold',
+    textAlign: 'center', // Optional: ensures text alignment for multiline text
   },
 });

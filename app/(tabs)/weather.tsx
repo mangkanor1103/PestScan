@@ -1,11 +1,13 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Image } from 'react-native';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 
 export default function WeatherScreen() {
   return (
     <ThemedView style={styles.titleContainer}>
-      <ThemedText type="title">Weather</ThemedText>
+      <ThemedText type="title" style={styles.titleText}>
+        Weather
+      </ThemedText>
     </ThemedView>
   );
 }
@@ -13,8 +15,16 @@ export default function WeatherScreen() {
 const styles = StyleSheet.create({
   titleContainer: {
     flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
+    alignItems: 'center', // Align items vertically
+    justifyContent: 'center', // Center items horizontally
+    gap: 10,
     padding: 16,
+    marginTop: 15,
+    backgroundColor: 'transparent',
+  },
+  titleText: {
+    fontSize: 23,
+    fontWeight: 'bold',
+    textAlign: 'center', // Optional: ensures text alignment for multiline text
   },
 });

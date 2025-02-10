@@ -1,36 +1,30 @@
-import { Image, StyleSheet, Platform } from 'react-native';
-
-import { HelloWave } from '@/components/HelloWave';
-import ParallaxScrollView from '@/components/ParallaxScrollView';
+import { StyleSheet, Image } from 'react-native';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 
 export default function HomeScreen() {
   return (
-  
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">PestScan</ThemedText>
-      </ThemedView>
-      
-    
+    <ThemedView style={styles.titleContainer}>
+      <ThemedText type="title" style={styles.titleText}>
+        Farm Health Dashboard
+      </ThemedText>
+    </ThemedView>
   );
 }
 
 const styles = StyleSheet.create({
   titleContainer: {
     flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
+    alignItems: 'center', // Align items vertically
+    justifyContent: 'center', // Center items horizontally
+    gap: 10,
+    padding: 16,
+    marginTop: 15,
+    backgroundColor: 'transparent',
   },
-  stepContainer: {
-    gap: 8,
-    marginBottom: 8,
-  },
-  reactLogo: {
-    height: 178,
-    width: 290,
-    bottom: 0,
-    left: 0,
-    position: 'absolute',
+  titleText: {
+    fontSize: 23,
+    fontWeight: 'bold',
+    textAlign: 'center', // Optional: ensures text alignment for multiline text
   },
 });
