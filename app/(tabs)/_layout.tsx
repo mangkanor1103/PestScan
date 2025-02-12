@@ -84,13 +84,16 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: 'black', // Text color
     marginLeft: 8, // Add space between the corn image and text
+    marginTop: 25,
   },
   menuButton: {
     padding: 10,
+    marginTop: 25,
   },
   cornImage: {
     width: 40,
     height: 40,
     resizeMode: 'contain',
+    marginTop: 25,
   },
 });
